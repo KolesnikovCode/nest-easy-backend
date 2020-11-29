@@ -6,7 +6,7 @@ import { Product, ProductDocument } from './schemas/product.schema';
 
 @Injectable()
 export class ProductsService {
-    
+
     constructor(@InjectModel(Product.name) private productModel: Model<ProductDocument>) {}
 
     async getAll(): Promise<Product[]> {
@@ -23,8 +23,8 @@ export class ProductsService {
         return newProduct.save();
     }
 
-    async remove() {
-        
+    async remove(id: string): Promise<Product> {
+        return this.productModel.findByIdAndDelete(id);
     }
 
 }

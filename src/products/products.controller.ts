@@ -1,6 +1,7 @@
 import {
     Body,
     Controller,
+    Delete,
     Get,
     Param,
     Post
@@ -27,6 +28,11 @@ export class ProductsController {
     @Post()
     create(@Body() createProductDto: CreateProductDto) {
         return this.productService.create(createProductDto);
+    }
+    // Remove product
+    @Delete(':id')
+    remove(@Param('id') id: string) {
+        return this.productService.remove(id);
     }
 
 }
