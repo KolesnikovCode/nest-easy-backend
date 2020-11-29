@@ -20,13 +20,13 @@ export class ProductsController {
     }
     // Get one product
     @Get(':id')
-    getOne(@Param('id') id: string): string {
-        return 'getOne ' + id
+    getOne(@Param('id') id: string) {
+        return this.productService.getById(id);
     }
     // Create new product
     @Post()
-    create(@Body() createProductDto: CreateProductDto): string {
-        return `Title: ${createProductDto.title} Price: ${createProductDto.price}`;
+    create(@Body() createProductDto: CreateProductDto) {
+        return this.productService.create(createProductDto);
     }
 
 }
