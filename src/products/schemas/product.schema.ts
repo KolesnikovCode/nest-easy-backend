@@ -10,7 +10,34 @@ export class Product {
     title: string;
 
     @Prop({ required: true })
+    description: string;
+
+    @Prop({ required: true })
+    gender: string;
+
+    @Prop({ required: true })
+    category: string; 
+
+    @Prop({ required: true })
+    tone: string;
+
+    @Prop({ required: true })
+    priceCategory: string;
+
+    @Prop({ required: true })
+    brand: string;
+
+    @Prop({ required: true })
+    image: Array<string>;
+
+    @Prop({ required: true })
     price: number;
+
+    @Prop()
+    constitution: string;
+
+    @Prop()
+    event: string;
 
 }
 
