@@ -5,7 +5,6 @@ export type ProductDocument = Product & Document;
 
 @Schema()
 export class Product {
-
     @Prop({ required: true })
     title: string;
 
@@ -28,7 +27,7 @@ export class Product {
     brand: string;
 
     @Prop({ required: true })
-    image: Array<string>;
+    images: Array<string>;
 
     @Prop({ required: true })
     price: number;
