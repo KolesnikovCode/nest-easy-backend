@@ -7,13 +7,15 @@ import { FilesModule } from './files/files.module';
 import { LooksController } from './looks/looks.controller';
 import { LooksService } from './looks/looks.service';
 import { LooksModule } from './looks/looks.module';
+import { BrandsModule } from './brands/brands.module';
 
 @Module({
   imports: [
     ProductsModule,
     MongooseModule.forRoot('mongodb+srv://easy-admin:easy-admin@easy-backend.yizf9.mongodb.net/easy-backend?retryWrites=true&w=majority'),
     FilesModule,
-    LooksModule
+    LooksModule,
+    BrandsModule
   ],
   controllers: [AppController, LooksController],
   providers: [AppService, LooksService],

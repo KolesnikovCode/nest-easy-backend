@@ -17,7 +17,7 @@ export class ProductsController {
     // Get all products
     @Get()
     getAll() {
-        return this.productService.getAll()
+        return this.productService.getAll();
     }
     // Get one product
     @Get(':id')
