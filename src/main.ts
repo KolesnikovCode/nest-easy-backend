@@ -1,11 +1,8 @@
 import { NestFactory } from '@nestjs/core';
-import { FastifyAdapter } from '@nestjs/platform-fastify';
 import { AppModule } from './app.module';
 
-const bodyLimit = 10048576;
-
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule, new FastifyAdapter({ bodyLimit }));
+  const app = await NestFactory.create(AppModule);
   app.enableCors();
   await app.listen(8080);
 }

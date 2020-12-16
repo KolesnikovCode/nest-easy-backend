@@ -20,6 +20,9 @@ export class FilesController {
   @Post('uploadMultipleFiles')
   @UseInterceptors(
     FilesInterceptor('images', 6, {
+      limits: {
+        fileSize: 10048576
+      },
       storage: diskStorage({
         destination: './uploads',
         filename: editFileName,
