@@ -17,7 +17,7 @@ import { BrandsModule } from './brands/brands.module';
     LooksModule,
     BrandsModule
   ],
-  controllers: [AppController, LooksController],
-  providers: [AppService, LooksService],
+  controllers: [AppController],
+  providers: [AppService],
 })
 export class AppModule {}
