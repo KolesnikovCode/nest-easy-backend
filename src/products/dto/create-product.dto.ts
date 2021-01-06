@@ -8,6 +8,6 @@ export class CreateProductDto {
   readonly tone: string;
   readonly priceCategory: string;
   readonly brand: string;
-  readonly image: Array<string>;
+  readonly images: Array<string>;
   readonly price: number;
 }
