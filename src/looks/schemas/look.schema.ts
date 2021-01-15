@@ -1,5 +1,5 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { Document, ModelUpdateOptions, Types } from 'mongoose';
+import { Document, Types } from 'mongoose';
 
 export type LookDocument = Look & Document;
 
