@@ -16,6 +16,20 @@ export enum EOrderStatuses {
     CANCELLED
 };
 
+export type TOrderAdress = {
+    city: string;
+    street: string;
+    houseNumber: string;
+
+    index?: string;
+    // Квартира
+    flat?: string;
+    // Подъезд
+    porch?: string;
+    // Этаж
+    floor?: string;
+}
+
 @Schema()
 export class Order {
     @Prop({ type: Date, required: true })
@@ -31,25 +45,13 @@ export class Order {
     email: string;
 
     @Prop({ required: true })
-    adress: {
-        city: string,
-        street: string,
-        houseNumber: string,
+    phone: string;
 
-        index?: string,
-        // Квартира
-        flat?: string
-        // Подъезд
-        porch?: string,
-        // Этаж
-        floor?: string,
-    };
+    @Prop({ type: Object, required: true })
+    adress: TOrderAdress;
 
     @Prop({ required: true })
     products: Array<TProductInOrder>
-
-    @Prop({ required: true })
-    phone: string;
 
     @Prop()
     comment: string;

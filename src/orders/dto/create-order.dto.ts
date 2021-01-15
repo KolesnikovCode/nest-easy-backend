@@ -1,4 +1,4 @@
-import { EOrderStatuses, TProductInOrder } from "../schemas/order.schema";
+import { EOrderStatuses, TOrderAdress, TProductInOrder } from "../schemas/order.schema";
 
 export class CreateOrderDto {
   readonly date: Date;
@@ -6,19 +6,7 @@ export class CreateOrderDto {
   readonly userId: string;
   readonly userName: string;
   readonly email: string;
-  readonly adress: {
-    city: string,
-    street: string,
-    houseNumber: string,
-
-    index?: string,
-    // Квартира
-    flat?: string
-    // Подъезд
-    porch?: string,
-    // Этаж
-    floor?: string,
-  };
+  readonly adress: TOrderAdress;
   readonly phone: string;
   readonly products: Array<TProductInOrder>;
   readonly comment?: string;

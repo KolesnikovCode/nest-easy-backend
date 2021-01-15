@@ -4,8 +4,6 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ProductsModule } from './products/products.module';
 import { FilesModule } from './files/files.module';
-import { LooksController } from './looks/looks.controller';
-import { LooksService } from './looks/looks.service';
 import { LooksModule } from './looks/looks.module';
 import { BrandsModule } from './brands/brands.module';
 import { OrdersModule } from './orders/orders.module';
