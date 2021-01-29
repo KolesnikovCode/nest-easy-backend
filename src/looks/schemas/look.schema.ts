@@ -6,7 +6,7 @@ export type LookDocument = Look & Document;
 @Schema()
 export class Look {
     @Prop({ required: true })
-    firebaseUserId: string;
+    creatorFbUId: string;
 
     @Prop({ required: true })
     title: string;

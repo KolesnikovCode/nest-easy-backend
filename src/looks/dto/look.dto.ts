@@ -1,6 +1,7 @@
 import { Product } from "src/products/schemas/product.schema";
 
 export class LookDto {
+    readonly creatorFbUId: string;
     readonly title: string;
     readonly description: string;
     readonly gender: string;
