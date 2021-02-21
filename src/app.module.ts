@@ -7,11 +7,12 @@ import { FilesModule } from './files/files.module';
 import { LooksModule } from './looks/looks.module';
 import { BrandsModule } from './brands/brands.module';
 import { OrdersModule } from './orders/orders.module';
-
+import { ConfigModule } from '@nestjs/config';
 @Module({
   imports: [
     ProductsModule,
-    MongooseModule.forRoot('mongodb+srv://easy-admin:easy-admin@easy-backend.yizf9.mongodb.net/easy-backend?retryWrites=true&w=majority'),
+    ConfigModule.forRoot(),
+    MongooseModule.forRoot(process.env.MONGO_DB_URL),
     FilesModule,
     LooksModule,
     BrandsModule,

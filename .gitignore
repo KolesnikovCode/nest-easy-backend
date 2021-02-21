@@ -4,6 +4,9 @@
 /.vscode
 /uploads/*
 
+#evn
+.env
+
 # Logs
 logs
 *.log
